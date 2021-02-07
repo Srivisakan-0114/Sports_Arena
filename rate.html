@@ -1,52 +1,27 @@
-<?php
-
-require('db.php');
-
-?>
-
-
 <!Doctype html>
 <html>
 <head>
-<title>Signup</title>
+<title>rate</title>
+<center> <h1> Ratings for this application</h1></center>
 <body>
-<?php
-	 if(isset($_POST["submit"])  )
-	 {
-		 if($_POST["upass"]==$_POST["upass1"]){
-
-		 $sql = "insert into users(uname,upass) values ('{$_POST["uname"]}','{$_POST["upass"]}')";
-		 $con->query($sql);
-		 echo "<p>User Registered Successfully.....</p>";
-		 header("location:login.php");
-	 }
-	 
-	 }
-	
-		
-	
-
-
-?>
 <div class="loginbox">
-<h1>Signup Here</h1>
-
-
-
-<form action="signup.php" method="post">
-   <p>Username:<input type="text" name="uname" placeholder="Enetr username"></p>
+<h1>Your valuable Ratings</h1>
+<form>
+   <p>Your Name:<input type="text" name="" placeholder=" Your Name"></p>
    <br>
-     <p>Password:
-	   <input type="password" name="upass" placeholder="Enter password"></p>
+     <p>Comments:
+	   <input type="text" name="" placeholder="valuable comments"></p>
 	   <br>
-     <p>Reenter Password:
-	   <input type="password" name="upass1" placeholder="Reenter password"></p>
-	   
+	   <p>Give your rating:<br>
+	   <input type="checkbox" name="poor" value="poor" tabindex="1"/>Poor</br>
+          <input type="checkbox" name="Average" value="Average" tabindex="2"/>Average</br>
+           <input type="checkbox" name="Good" value="Good" tabindex="3"/>Good</br>
+		   <input type="checkbox" name="Excellent" value="Excellent" tabindex="4"/>Excellent</br></p>		  
 	   <br>
-	     <button type="submit" name="submit">Signin</button>
+	     <button type="submit">Submit</button>
 		 <br>
 		 <br>
-		 <button >Cancel</button> 
+		 <button type="sumbmit">Cancel</button> 
 		  
 		   
 		   
@@ -59,18 +34,20 @@ margin:0;
 padding:0;
 }
 body{
-background-image:url('signup.jpg');
+background-image:url('img1.jpg');
 background-size:cover;
 background-attachment:fixed;
 background-position:center;
 }
 .loginbox{
 width:275px;
-height:475px;
+height:527px;
 background:#000;
 color:white;
-top:50%;
+top:53%;
 left:50%;
+right:50%;
+bottom:75;
 position:absolute;
 transform:translate(-50%,-50%);
 box-sizing:border-box;
